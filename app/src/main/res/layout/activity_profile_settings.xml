@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/top_nav_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="43dp"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/EditNameIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Back_Icon"
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="30dp"
+            android:text="@string/Profile_Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+    </LinearLayout>
+
+    <!-- Full Name Text -->
+    <TextView
+        android:id="@+id/FullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:text="@string/Full_Name"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/EditNameIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_nav_bar" />
+
+    <!-- Email Address Text -->
+    <TextView
+        android:id="@+id/editTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:text="@string/User_EMail"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/EditEmailIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FullName" />
+
+    <!-- Phone Number Text -->
+    <TextView
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:text="@string/Phone_Number"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editPhoneNumberIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
+
+    <!-- Edit Name Icon -->
+    <ImageButton
+        android:id="@+id/EditNameIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/Edit_Name"
+        app:layout_constraintBottom_toTopOf="@+id/EditEmailIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FullName"
+        app:layout_constraintTop_toBottomOf="@+id/top_nav_bar"
+        app:srcCompat="@drawable/baseline_border_color_24"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Edit Email Icon -->
+    <ImageButton
+        android:id="@+id/EditEmailIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/Edit_Email"
+        app:layout_constraintBottom_toTopOf="@+id/editPhoneNumberIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/EditNameIcon"
+        app:srcCompat="@drawable/baseline_border_color_24"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Edit Phone number icon -->
+    <ImageButton
+        android:id="@+id/editPhoneNumberIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="595dp"
+        android:contentDescription="@string/Edit_PhoneNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/EditEmailIcon"
+        app:srcCompat="@drawable/baseline_border_color_24"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Notifications Text -->
+    <TextView
+        android:id="@+id/editNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="505dp"
+        android:ems="10"
+        android:text="@string/Notifications"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Email switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/EmailSwitch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="406dp"
+        android:text="@string/Email_Notifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- request updates Switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/RequestUpdatesSwitch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="452dp"
+        android:text="@string/Request_Updates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Due Date Reminders Switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/DueDateReminderSwitch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="496dp"
+        android:text="@string/Due_Date_Reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

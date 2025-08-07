@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/top_nav_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="212dp"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/Catalogue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="60dp"
+            android:paddingEnd="0dp"
+            android:text="@string/Dashboard_Title"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
+
+        <!-- Notification Button -->
+        <ImageButton
+            android:id="@+id/NotificationIcon"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Notifications_Icon"
+            android:src="@drawable/baseline_add_alert_24"
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+
+        <!-- Profile Settings Button -->
+        <ImageButton
+            android:id="@+id/ProfileOptionsIcon"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Profile_Settings_Icon"
+            android:src="@drawable/baseline_account_circle_24"
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+
+    </LinearLayout>
+
+    <!-- Browse Catalogue Button -->
+    <Button
+        android:id="@+id/Catalogue"
+        android:layout_width="230dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="562dp"
+        android:backgroundTint="#000000"
+        android:text="@string/Browse_Catalogue"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_nav_bar"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- My Requests Button -->
+    <Button
+        android:id="@+id/MyRequests"
+        android:layout_width="230dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#000000"
+        android:text="@string/My_Requests"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/MyBooks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- My Books Button -->
+    <Button
+        android:id="@+id/MyBooks"
+        android:layout_width="230dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="325dp"
+        android:backgroundTint="#000000"
+        android:text="@string/My_Books"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="218dp"
+        android:text="@string/Welcome_Message"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/MyBooks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_nav_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
