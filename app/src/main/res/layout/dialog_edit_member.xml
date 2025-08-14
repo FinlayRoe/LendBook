@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="postalAddress"
-            android:hint="@string/end_date"
+            android:hint="@string/End_Date"
             android:importantForAutofill="yes"
             android:inputType="date"
             android:minHeight="48dp" />

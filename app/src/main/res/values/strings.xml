@@ -38,6 +38,7 @@
     <string name="Members_List_Title">Manage Members</string>
 
 <!-- Supplemental Strings-->
+    <string name="End_Date">Membership End Date</string>
     <string name="Profile_Settings_Icon">Profile Settings</string>
     <string name="Notifications_Icon">Notifications</string>
     <string name="Back_Icon">Back</string>
