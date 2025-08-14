@@ -11,18 +11,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MemberDashboard extends AppCompatActivity {
+public class AdminDashboard extends AppCompatActivity {
 
     private String firstname, lastname, email, username, phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_member_dashboard);
+        setContentView(R.layout.activity_admin_dashboard);
 
         Button buttonCatalogue = findViewById(R.id.Catalogue);
         Button buttonMyBooks = findViewById(R.id.MyBooks);
         Button buttonMyRequests = findViewById(R.id.MyRequests);
+        Button buttonManageMembers = findViewById(R.id.ManageMembers);
         ImageButton profileOptionsIcon = findViewById(R.id.ProfileOptionsIcon);
         TextView welcomeText = findViewById(R.id.WelcomeText);
 
@@ -33,19 +34,25 @@ public class MemberDashboard extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
         phone = getIntent().getStringExtra("phone");
 
-        welcomeText.setText(getString(R.string.welcomeText, username));
+        welcomeText.setText(getString(R.string.welcomeText, firstname));
 
-        buttonCatalogue.setOnClickListener(v -> startActivity(new Intent(MemberDashboard.this, Catalogue.class)));
-        buttonMyBooks.setOnClickListener(v -> startActivity(new Intent(MemberDashboard.this, MyBooks.class)));
-        buttonMyRequests.setOnClickListener(v -> startActivity(new Intent(MemberDashboard.this, MyRequests.class)));
+        buttonCatalogue.setOnClickListener(v -> startActivity(new Intent(AdminDashboard.this, Catalogue.class)));
+        buttonMyBooks.setOnClickListener(v -> startActivity(new Intent(AdminDashboard.this, MyBooks.class)));
+        buttonMyRequests.setOnClickListener(v -> startActivity(new Intent(AdminDashboard.this, MyRequests.class)));
+        buttonManageMembers.setOnClickListener(v -> startActivity(new Intent(AdminDashboard.this, MemberList.class)));
         profileOptionsIcon.setOnClickListener(this::showProfileOptionsMenu);
         buttonCatalogue.setOnClickListener(v -> {
-            Intent intent = new Intent(MemberDashboard.this, Catalogue.class);
-            intent.putExtra("fromDashboard", "member");
+            Intent intent = new Intent(AdminDashboard.this, Catalogue.class);
+            intent.putExtra("fromDashboard", "admin");
+            startActivity(intent);
+        });
+
+        buttonManageMembers.setOnClickListener(v -> {
+            Intent intent = new Intent(AdminDashboard.this, MemberList.class);
+            intent.putExtra("fromDashboard", "admin");
             startActivity(intent);
         });
     }
-
     //PopupMenu for profile options and sign out
     private void showProfileOptionsMenu(View anchor) {
         PopupMenu popupMenu = new PopupMenu(this, anchor);
@@ -54,7 +61,7 @@ public class MemberDashboard extends AppCompatActivity {
 
         popupMenu.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.menu_profile_settings) {
-                Intent intent = new Intent(MemberDashboard.this, ProfileSettings.class);
+                Intent intent = new Intent(AdminDashboard.this, ProfileSettings.class);
                 intent.putExtra("firstname", firstname);
                 intent.putExtra("lastname", lastname);
                 intent.putExtra("email", email);
@@ -63,8 +70,8 @@ public class MemberDashboard extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             } else if (item.getItemId() == R.id.menu_sign_out) {
-                Toast.makeText(MemberDashboard.this, "Signed out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MemberDashboard.this, LoginActivity.class));
+                Toast.makeText(AdminDashboard.this, "Signed out", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(AdminDashboard.this, LoginActivity.class));
                 finish();
                 return true;
             }

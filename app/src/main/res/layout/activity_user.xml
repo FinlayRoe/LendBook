@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
@@ -15,7 +16,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/book_name"
+            android:id="@+id/Member_FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dp"
@@ -24,7 +25,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/book_author"
+            android:id="@+id/Member_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dp"
@@ -32,14 +33,14 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/book_availability"
+            android:id="@+id/Member_Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textStyle="italic"
             android:paddingBottom="8dp" />
 
-        <!-- Button row -->
+        <!-- Buttons row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,19 +49,27 @@
             android:layout_marginTop="8dp">
 
             <Button
-                android:id="@+id/Catalogue"
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#000000"
+                android:text="@string/Edit"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:cornerRadius="8dp"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/remove_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#000000"
-                android:text="Request Book"
-                android:textSize="20sp"
-                app:cornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_nav_bar" />
-
+                android:text="@string/Remove"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:cornerRadius="8dp"
+                tools:ignore="ButtonStyle" />
 
         </LinearLayout>
 

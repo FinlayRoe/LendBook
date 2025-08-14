@@ -13,13 +13,15 @@
     <string name="Browse_Catalogue">Browse Catalogue</string>
     <string name="My_Requests">My Requests</string>
     <string name="My_Books">My Books</string>
+    <string name="welcomeText">Welcome, %1$s!</string>
     <string name="Member_Management">Manage Members</string>
 
 <!--  Profile Settings Strings  -->
     <string name="Profile_Title">Profile Settings</string>
-    <string name="Full_Name">John Doe</string>
+    <string name="Full_Name">%1$s %2$s</string>
     <string name="User_EMail">John.Doe@example.com</string>
-    <string name="Phone_Number">1234567890</string>
+    <string name="Username">Username</string>
+    <string name="Phone_Number">1234567890123</string>
     <string name="Notifications">Notifications</string>
     <string name="Email_Notifications">E-Mail Notifications</string>
     <string name="Request_Updates">Request Updates</string>
@@ -28,53 +30,12 @@
 <!-- Catalogue Strings   -->
     <string name="Catalogue_Title">Catalogue</string>
 
-<!--  Individual Book Strings  -->
-    <!--  Book 1  -->
-    <string name="book_name1">1984</string>
-    <string name="book_description1">Novel by George Orwell</string>
-    <string name="book_availability1">Available</string>
-    <string name="book_expected_date1">Expected on 29/08/2025</string>
-    <string name="book_due_date1">Due on 29/08/2025</string>
-
-    <!--  Book 2  -->
-    <string name="book_name2">Brave New World</string>
-    <string name="book_description2">Novel by Aldous Huxley</string>
-    <string name="book_availability2">Unavailable</string>
-    <string name="book_expected_date2">Expected on 14/08/2025</string>
-    <string name="book_due_date2">Due on 14/08/2025</string>
-
-    <!--  Book 3  -->
-    <string name="book_name3">The Hobbit</string>
-    <string name="book_description3">Novel by J.R.R Tolkien</string>
-    <string name="book_availability3">Available</string>
-    <string name="book_expected_date3">Expected on 29/08/2025</string>
-    <string name="book_due_date3">Due on 29/08/2025</string>
-
-    <!--  Book 4  -->
-    <string name="book_name4">Frankenstein</string>
-    <string name="book_description4">Novel by Mary Shelley</string>
-    <string name="book_availability4">Available</string>
-    <string name="book_expected_date4">Expected on 20/08/2025</string>
-    <string name="book_due_date4">Due on 20/08/2025</string>
-
-    <!--  Book 5  -->
-    <string name="book_name5">To Kill a Mockingbird</string>
-    <string name="book_description5">Novel by Harper Lee</string>
-    <string name="book_availability5">Unavailable</string>
-    <string name="book_expected_date5">Expected on 13/08/2025</string>
-    <string name="book_due_date5">Due on 13/08/2025</string>
-
-    <!--  Book 6  -->
-    <string name="book_name6">Moby Dick</string>
-    <string name="book_description6">Novel by Herman Melville</string>
-    <string name="book_availability6">Available</string>
-    <string name="book_expected_date6">Expected on 29/08/2025</string>
-    <string name="book_due_date6">Due on 29/08/2025</string>
-
 <!-- Requests Strings -->
     <string name="Request_Title">My Requests</string>
 <!-- My Books Strings-->
     <string name="My_Books_Title">My Books</string>
+<!--  Members List Strings  -->
+    <string name="Members_List_Title">Manage Members</string>
 
 <!-- Supplemental Strings-->
     <string name="Profile_Settings_Icon">Profile Settings</string>
@@ -83,16 +44,15 @@
     <string name="Edit_Name">Edit Name</string>
     <string name="Edit_PhoneNumber">Edit Phone number</string>
     <string name="Edit_Email">Edit Email</string>
-
+    <string name="Book_Available">Available</string>
+    <string name="Book_Unavailable">Unavailable</string>
+    <string name="Loan_Book">Loan Book</string>
+    <string name="Request_Book">Request Book</string>
+    <string name="Remove">Remove</string>
+    <string name="Edit">Edit</string>
+    <string name="Add_Member">Add_Member</string>
     <string name="app_name">LendBook</string>
     <string name="back">Back</string>
-    <string name="submit_request">Submit Request</string>
-    <string name="end_date">End Date</string>
-    <string name="start_date">Start Date</string>
-    <string name="employee_number">Employee Number</string>
-    <string name="manage_employee_details">Manage Employee Details</string>
-    <string name="manage_holiday_requests">Manage Holiday Requests</string>
-    <string name="admin_dashboard">Admin Dashboard</string>
 
 
 </resources>
